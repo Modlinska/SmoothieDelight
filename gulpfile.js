@@ -24,6 +24,7 @@ gulp.task("sass", function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("css"))
 });
+
 gulp.task("default", function () {
     gulp.watch("./scss/**/*.scss", gulp.series("sass"));
     gulp.watch("./js/**/*.js", gulp.series("jshint"));

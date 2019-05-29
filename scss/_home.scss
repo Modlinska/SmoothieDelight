@@ -1,0 +1,42 @@
+.home{
+  h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2rem;
+    margin: 10px;
+    text-align: center;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+   flex-direction: row;
+  }
+
+  img{
+    max-width: 100%;
+    @media (min-width: 768px) {
+     margin: 5px 10px;
+    }
+
+  }
+  .smoothieInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  h3{
+  padding: 10px;
+
+  }
+  p{
+    padding: 5px 10px;
+  }
+}
+}
+}
