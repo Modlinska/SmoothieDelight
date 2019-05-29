@@ -1,0 +1,29 @@
+.smoothies{
+  background-color: $mainColor;
+  h2{
+    padding: 10px 0;
+  }
+.smoothiesType{
+  h3{
+    text-align: center;
+    background-color: $mainFontColor;
+    color: $mainColor;
+    padding: 5px;
+  }
+  .smoothieGallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      margin: 5px;
+    }
+    p{
+      padding: 10px;
+      font-size: 1rem;
+      max-width: 320px;
+    }
+  }
+
+}
+}

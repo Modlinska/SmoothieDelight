@@ -1,11 +1,11 @@
 .aboutUs {
-  background-color: $mainColor;
+
 
   .aboutUsInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
     h3 {
       padding: 10px;
