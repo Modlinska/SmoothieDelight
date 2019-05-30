@@ -1,29 +1,102 @@
-.smoothies{
-  background-color: $mainColor;
-  h2{
-    padding: 10px 0;
-  }
-.smoothiesType{
-  h3{
-    text-align: center;
-    background-color: $mainFontColor;
-    color: $mainColor;
-    padding: 5px;
-  }
-  .smoothieGallery{
+.smoothieContainer {
+  @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    img{
-      margin: 5px;
+    flex-wrap: wrap;
+  }
+}
+
+
+.smoothies {
+  background-color: $mainColor;
+
+  .smoothieSlider1, .smoothieSlider2, .smoothieSlider3 {
+    position: relative;
+    h3 {
+      text-align: center;
+      //background-color: $mainFontColor;
+      color: $mainFontColor;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      padding: 5px;
+      @media (min-width: 768px) {
+        margin: 5px;
+      }
+
     }
-    p{
-      padding: 10px;
-      font-size: 1rem;
-      max-width: 320px;
+
+    .toRight, .toLeft {
+      font-size: 2rem;
+      color: white;
+      font-weight: bold;
+      padding: 150px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(92, 121, 122, 0.5);
+      }
+    }
+
+    .smoothieSliderItem {
+      display: none;
+
+      &.visible {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        img {
+          margin: 5px;
+        }
+
+        p {
+          padding: 10px;
+          font-size: 1rem;
+          max-width: 320px;
+        }
+      }
     }
   }
+  .smoothieSlider1 .toLeft {
+    cursor: pointer;
+    position: absolute;
+    top:80px;
+    left: 6px;
+  }
 
-}
+  .smoothieSlider1 .toRight {
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    right: 6px;
+  }
+  .smoothieSlider2 .toLeft {
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    left: 6px;
+  }
+
+  .smoothieSlider2 .toRight {
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    right: 6px;
+  }
+  .smoothieSlider3 .toLeft {
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    left: 6px;
+  }
+
+  .smoothieSlider3 .toRight {
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    right: 6px;
+  }
 }
