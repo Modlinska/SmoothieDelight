@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     var navIcon = document.getElementById("navIcon");
     var nav = document.querySelector('nav');
-    var btnrght1 = document.querySelectorAll(".smoothieSlider1 .toRight");
-    var btnrght2 = document.querySelectorAll(".smoothieSlider2 .toRight");
-    var btnrght3 = document.querySelectorAll(".smoothieSlider3 .toRight");
-    var btnleft1 = document.querySelectorAll(".smoothieSlider1 .toLeft");
-    var btnleft2 = document.querySelectorAll(".smoothieSlider2 .toLeft");
-    var btnleft3 = document.querySelectorAll(".smoothieSlider3 .toLeft");
+    var btnrght1 = document.querySelector(".smoothieSlider1 .toRight");
+    var btnrght2 = document.querySelector(".smoothieSlider2 .toRight");
+    var btnrght3 = document.querySelector(".smoothieSlider3 .toRight");
+    var btnleft1 = document.querySelector(".smoothieSlider1 .toLeft");
+    var btnleft2 = document.querySelector(".smoothieSlider2 .toLeft");
+    var btnleft3 = document.querySelector(".smoothieSlider3 .toLeft");
     var allSlider1Items = document.querySelectorAll(".smoothieSlider1 .smoothieSliderItem");
     var allSlider2Items = document.querySelectorAll(".smoothieSlider2 .smoothieSliderItem");
     var allSlider3Items = document.querySelectorAll(".smoothieSlider3 .smoothieSliderItem");
@@ -19,84 +19,84 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle('showNav');
     });
 
-    var index = 0;
-    allSlider1Items[index].classList.add("visible");
-    allSlider2Items[index].classList.add("visible");
-    allSlider3Items[index].classList.add("visible");
+    var index1 = 0;
+    var index2 = 0;
+    var index3 = 0;
 
-    for (var i = 0; i < btnrght1.length; i++) {
-        index = 0;
-        btnrght1[i].addEventListener('click', function (event) {
-            allSlider1Items[index].classList.remove('visible')
-            index = index + 1;
-            if (index >= allSlider1Items.length) {
-                index = 0;
-            }
-            allSlider1Items[index].classList.add('visible');
-        });
-    }
-    for (var i = 0; i < btnleft1.length; i++) {
-        index = 0;
-        btnleft1[i].addEventListener('click', function () {
+    allSlider1Items[index1].classList.add("visible");
+    allSlider2Items[index2].classList.add("visible");
+    allSlider3Items[index3].classList.add("visible");
 
-            allSlider1Items[index].classList.remove('visible');
-            index = index - 1;
-            if (index < 0) {
-                index = allSlider1Items.length - 1;
-            }
-            allSlider1Items[index].classList.add('visible');
-        });
-    }
-    for (var i = 0; i < btnrght2.length; i++) {
 
-        btnrght2[i].addEventListener('click', function (event) {
+//Slider for everyone
 
-            allSlider2Items[index].classList.remove('visible');
-            index = index + 1;
-            if (index >= allSlider2Items.length) {
-                index = 0;
-            }
-            allSlider2Items[index].classList.add('visible');
+    btnrght1.addEventListener('click', function (event) {
+        allSlider1Items[index1].classList.remove('visible')
+        index1 = index1 + 1;
+        if (index1 >= allSlider1Items.length) {
+            index1 = 0;
+        }
+        allSlider1Items[index1].classList.add('visible');
+    });
 
-        });
-    }
-    for (var i = 0; i < btnleft2.length; i++) {
-        btnleft2[i].addEventListener('click', function () {
-            allSlider2Items[index].classList.remove('visible');
-            index = index - 1;
-            if (index < 0) {
-                index = allSlider2Items.length - 1;
-            }
-            allSlider2Items[index].classList.add('visible');
-        });
-    }
-    for (var i = 0; i < btnrght3.length; i++) {
+    btnleft1.addEventListener('click', function () {
 
-        btnrght3[i].addEventListener('click', function (event) {
+        allSlider1Items[index1].classList.remove('visible');
+        index1 = index1 - 1;
+        if (index1 < 0) {
+            index1 = allSlider1Items.length - 1;
+        }
+        allSlider1Items[index1].classList.add('visible');
+    });
 
-            allSlider3Items[index].classList.remove('visible');
-            index = index + 1;
-            if (index >= allSlider3Items.length) {
-                index = 0;
-            }
-            allSlider3Items[index].classList.add('visible');
+//Slider for lose weight
 
-        });
-    }
-    for (var i = 0; i < btnleft3.length; i++) {
-        btnleft3[i].addEventListener('click', function () {
+    btnrght2.addEventListener('click', function (event) {
 
-            allSlider3Items[index].classList.remove('visible');
-            index = index - 1;
-            if (index < 0) {
-                index = allSlider3Items.length - 1;
-            }
-            allSlider3Items[index].classList.add('visible');
-        });
-    }
+        allSlider2Items[index2].classList.remove('visible');
+        index2 = index2 + 1;
+        if (index2 >= allSlider2Items.length) {
+            index2 = 0;
+        }
+        allSlider2Items[index2].classList.add('visible');
+    });
+
+    btnleft2.addEventListener('click', function () {
+        allSlider2Items[index2].classList.remove('visible');
+        index2 = index2 - 1;
+        if (index2 < 0) {
+            index2 = allSlider2Items.length - 1;
+        }
+        allSlider2Items[index2].classList.add('visible');
+    });
+
+// Slider for muscle
+    
+    btnrght3.addEventListener('click', function (event) {
+
+        allSlider3Items[index3].classList.remove('visible');
+        index3 = index3 + 1;
+        if (index3 >= allSlider3Items.length) {
+            index3 = 0;
+        }
+        allSlider3Items[index3].classList.add('visible');
+
+    });
+
+    btnleft3.addEventListener('click', function () {
+
+        allSlider3Items[index3].classList.remove('visible');
+        index3 = index3 - 1;
+        if (index3 < 0) {
+            index3 = allSlider3Items.length - 1;
+        }
+        allSlider3Items[index3].classList.add('visible');
+    });
+
 // E-mail validation
     var mailErr = "";
     var emailError = document.createElement('p');
+    emailError.classList.add('emailErrorMessage')
     newsletterForm.addEventListener('submit', function (event) {
         mailErr = "";
         emailError.innerText = mailErr;
@@ -111,16 +111,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // var slider = tns({
-    //     container: '.my-slider',
-    //     items: 1,
-    //     slideBy: 'page',
-    //     autoplay: true,
-    //     nav: false,
-    //     autoplayButtonOutput: false
-    // });
+// var slider = tns({
+//     container: '.my-slider',
+//     items: 1,
+//     slideBy: 'page',
+//     autoplay: true,
+//     nav: false,
+//     autoplayButtonOutput: false
+// });
 
-});
+})
+;
 
 
 
