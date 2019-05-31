@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     allSlider3Items[index].classList.add("visible");
 
     for (var i = 0; i < btnrght1.length; i++) {
-
+        index = 0;
         btnrght1[i].addEventListener('click', function (event) {
             allSlider1Items[index].classList.remove('visible')
             index = index + 1;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     for (var i = 0; i < btnleft1.length; i++) {
-
+        index = 0;
         btnleft1[i].addEventListener('click', function () {
 
             allSlider1Items[index].classList.remove('visible');
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
             allSlider1Items[index].classList.add('visible');
         });
     }
-
     for (var i = 0; i < btnrght2.length; i++) {
 
         btnrght2[i].addEventListener('click', function (event) {
@@ -62,9 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     for (var i = 0; i < btnleft2.length; i++) {
-
         btnleft2[i].addEventListener('click', function () {
-
             allSlider2Items[index].classList.remove('visible');
             index = index - 1;
             if (index < 0) {
@@ -73,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
             allSlider2Items[index].classList.add('visible');
         });
     }
-
     for (var i = 0; i < btnrght3.length; i++) {
 
         btnrght3[i].addEventListener('click', function (event) {
@@ -88,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     for (var i = 0; i < btnleft3.length; i++) {
-
         btnleft3[i].addEventListener('click', function () {
 
             allSlider3Items[index].classList.remove('visible');
@@ -99,10 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
             allSlider3Items[index].classList.add('visible');
         });
     }
-// walidacja e-maila
-    submitbtn.addEventListener('click', function (event) {
-        event.preventDefault();
-
+// E-mail validation
+    var mailErr = "";
+    var emailError = document.createElement('p');
+    newsletterForm.addEventListener('submit', function (event) {
+        mailErr = "";
+        emailError.innerText = mailErr;
+        var mailReg = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/;
+        if (!mailReg.test(newsletterInput.value)) {
+            mailErr = "Enter correct e-mail address"
+        }
+        if (mailErr !== "") {
+            event.preventDefault();
+            emailError.innerText = mailErr;
+            newsletterForm.insertBefore(emailError, newsletterInput);
+        }
     });
 
     // var slider = tns({
