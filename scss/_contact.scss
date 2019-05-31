@@ -1,0 +1,15 @@
+.contactContainer{
+  @media (min-width: 768px) {
+  .address{
+    float: left;
+  }
+  .contactEmail{
+    float: right;
+  }
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+}

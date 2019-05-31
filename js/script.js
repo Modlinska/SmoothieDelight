@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 // Slider for muscle
-    
+
     btnrght3.addEventListener('click', function (event) {
 
         allSlider3Items[index3].classList.remove('visible');
