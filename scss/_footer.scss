@@ -5,9 +5,10 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: $mainFontColor;
     p:first-of-type{
       font-family: 'Pacifico', cursive;
-      color: $mainFontColor;
+
     }
   }
 

@@ -1,11 +1,12 @@
 .aboutUs {
-
+  background-color: $secondColor;
 
   .aboutUsInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
 
     h3 {
       padding: 10px;

@@ -111,14 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-// var slider = tns({
-//     container: '.my-slider',
-//     items: 1,
-//     slideBy: 'page',
-//     autoplay: true,
-//     nav: false,
-//     autoplayButtonOutput: false
-// });
+var slider = tns({
+    container: '.my-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    nav: false,
+    autoplayButtonOutput: false,
+    controls: false
+
+});
 
 })
 ;
