@@ -61,34 +61,18 @@
     }
   }
 
-  .smoothieSlider1 .toLeft {
+  .smoothieSlider1 .toLeft, .smoothieSlider2 .toLeft, .smoothieSlider3 .toLeft {
     cursor: pointer;
     position: absolute;
     top: 80px;
     left: 6px;
   }
 
-  .smoothieSlider1 .toRight {
+  .smoothieSlider1 .toRight, .smoothieSlider3 .toRight, .smoothieSlider2 .toRight {
     cursor: pointer;
     position: absolute;
     top: 80px;
     right: 6px;
   }
 
-  .smoothieSlider2 .toLeft {
-    @extend .smoothieSlider1 .toLeft;
-  }
-
-  .smoothieSlider2 .toRight {
-    @extend .smoothieSlider1 .toRight;
-
-  }
-
-  .smoothieSlider3 .toLeft {
-    @extend .smoothieSlider1 .toLeft;
-  }
-
-  .smoothieSlider3 .toRight {
-    @extend .smoothieSlider1 .toRight;
-  }
 }
