@@ -1,4 +1,4 @@
-.home {
+.homePage {
   background-color: $secondColor;
   .homeContainer {
     display: flex;
@@ -8,22 +8,18 @@
     @media (min-width: 768px) {
       flex-direction: row;
     }
-
     img {
       max-width: 100%;
       @media (min-width: 768px) {
         margin: 5px 10px;
+        flex-shrink: 0;
       }
-
     }
-
     .homeSmoothieInfo {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-
-
     }
   }
 }

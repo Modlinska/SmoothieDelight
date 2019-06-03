@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var allSlider1Items = document.querySelectorAll(".smoothieSlider1 .smoothieSliderItem");
     var allSlider2Items = document.querySelectorAll(".smoothieSlider2 .smoothieSliderItem");
     var allSlider3Items = document.querySelectorAll(".smoothieSlider3 .smoothieSliderItem");
-    var submitbtn = document.querySelector(".newsletterForm button");
     var newsletterForm = document.querySelector(".newsletterForm");
     var newsletterInput = document.querySelector(".newsletterForm input");
 
@@ -27,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     allSlider2Items[index2].classList.add("visible");
     allSlider3Items[index3].classList.add("visible");
 
-
 //Slider for everyone
 
     btnrght1.addEventListener('click', function (event) {
+
         allSlider1Items[index1].classList.remove('visible')
         index1 = index1 + 1;
         if (index1 >= allSlider1Items.length) {
@@ -121,6 +120,7 @@ var slider = tns({
     controls: false
 
 });
+
 
 })
 ;

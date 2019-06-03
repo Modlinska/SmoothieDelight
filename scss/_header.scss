@@ -8,18 +8,22 @@ header {
     justify-content: center;
 
   }
-  .my-slider{
-    img{
-      width: 100%;
-    }
-  .tns-outer{
 
-    width: 100%;
+  .sliderContainer {
+    max-width: 100%;
+    overflow: hidden;
+
+    .my-slider {
+      img {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
   }
-  }
+
   .mobileMenuHeader {
     background-color: $mainColor;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -37,9 +41,15 @@ header {
   }
 
   nav {
+
     display: none;
     @media (min-width: 768px) {
       display: inline-block;
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      left: 0;
+      z-index: 1;
     }
 
     &.showNav {

@@ -10,10 +10,11 @@
 
 .smoothies {
   background-color: $mainColor;
-  color:$mainFontColor;
+  color: $mainFontColor;
 
   .smoothieSlider1, .smoothieSlider2, .smoothieSlider3 {
     position: relative;
+
     h3 {
       text-align: center;
       color: $mainFontColor;
@@ -50,20 +51,20 @@
 
         img {
           margin: 5px;
+          border-radius: 25px;
         }
 
         p {
-          padding: 10px;
-          font-size: 1.2rem;
           max-width: 320px;
         }
       }
     }
   }
+
   .smoothieSlider1 .toLeft {
     cursor: pointer;
     position: absolute;
-    top:80px;
+    top: 80px;
     left: 6px;
   }
 
@@ -73,30 +74,21 @@
     top: 80px;
     right: 6px;
   }
+
   .smoothieSlider2 .toLeft {
-    cursor: pointer;
-    position: absolute;
-    top: 80px;
-    left: 6px;
+    @extend .smoothieSlider1 .toLeft;
   }
 
   .smoothieSlider2 .toRight {
-    cursor: pointer;
-    position: absolute;
-    top: 80px;
-    right: 6px;
+    @extend .smoothieSlider1 .toRight;
+
   }
+
   .smoothieSlider3 .toLeft {
-    cursor: pointer;
-    position: absolute;
-    top: 80px;
-    left: 6px;
+    @extend .smoothieSlider1 .toLeft;
   }
 
   .smoothieSlider3 .toRight {
-    cursor: pointer;
-    position: absolute;
-    top: 80px;
-    right: 6px;
+    @extend .smoothieSlider1 .toRight;
   }
 }
