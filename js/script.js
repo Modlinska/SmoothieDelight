@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var newsletterForm = document.querySelector(".newsletterForm");
     var newsletterInput = document.querySelector(".newsletterForm input");
 
+
+    // Menu
     navIcon.addEventListener("click", function (event) {
         this.classList.toggle('open');
         nav.classList.toggle('showNav');
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+//Slider from header
 var slider = tns({
     container: '.my-slider',
     items: 1,
